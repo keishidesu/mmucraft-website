@@ -25,8 +25,8 @@ For detailed explanation, check out [Nuxt.js docs](https://nuxtjs.org).
 - Logical variable names
 
 ## CSS
-*Minimize the use of css. Make good use of Bootstrap Vue or Bootstrap instead for non-complexed designs. <br>
-If you are unfamiliar with Bootstrap, this is the [documentation](https://getbootstrap.com/docs/4.3/getting-started/introduction/) for Bootstrap 4.*
+*Minimize the use of css. Make good use of BootstrapVue or Bootstrap instead for non-complexed designs. <br>
+If you are unfamiliar with Bootstrap, this is the [documentation](https://getbootstrap.com/docs/4.3/getting-started/introduction/) for Bootstrap 4 and the [documentation](https://bootstrap-vue.org/docs) for BootstrapVue*
 
 - Define CSS __only__ at `layouts` and `components`
 - Only define CSS classes when necessary and try make them re-usable
