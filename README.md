@@ -52,4 +52,4 @@ If the components are only meant for the page itself, create a folder with the s
 For example:
 
 `mycomponent.vue` is a component specifically made for the page `mypage.vue`. <br>
-Then locate `mycomponent.vue` in `~/components<mypage/mycomponent.vue`
+Then locate `mycomponent.vue` in `~/components/mypage/mycomponent.vue`
