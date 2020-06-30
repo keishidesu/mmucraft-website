@@ -48,8 +48,8 @@ mypage.vue (~/pages/mypage.vue)
 ## Components
 
 Make __re-usable__ components. 
-If the components are only meant for the page itself, create a folder with the same name as the page under `components` and locate your component in there.
+Create a folder with the same name as the page under `components` and locate your component in there.
 For example:
 
-`mycomponent.vue` is a component specifically made for the page `mypage.vue`. <br>
+`mycomponent.vue` is a component for the page `mypage.vue`. <br>
 Then locate `mycomponent.vue` in `~/components/mypage/mycomponent.vue`
