@@ -1,7 +1,7 @@
 <template>
   <div>
     <b-navbar toggleable="lg" type="dark" class="bg-dark py-2">
-      <b-navbar-brand href="#">
+      <b-navbar-brand href="/">
         MMUC
       </b-navbar-brand>
       <b-navbar-toggle target="nav-collapse" />
@@ -15,10 +15,13 @@
           >
             {{ item.navitem }}
           </b-nav-item>
+          <b-nav-item class="d-md-none">
+            Join the server
+          </b-nav-item>
         </b-navbar-nav>
-        <b-navbar-nav class="ml-auto">
+        <b-navbar-nav class="ml-auto d-md-block d-none">
           <b-button href="/join" variant="outline-light">
-            Join Game
+            Join the server
           </b-button>
         </b-navbar-nav>
       </b-collapse>
