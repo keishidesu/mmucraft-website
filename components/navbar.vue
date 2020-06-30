@@ -1,28 +1,27 @@
 <template>
   <div>
     <b-navbar toggleable="lg" type="dark" class="bg-dark py-2">
-      <b-navbar-brand href="#">
+      <b-navbar-brand href="/">
         MMUC
       </b-navbar-brand>
-
       <b-navbar-toggle target="nav-collapse" />
-
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav>
           <b-nav-item
             v-for="(item,i) in navitems"
-            :key="`item-${i}`"
+            :key="`nav-item-${i}`"
             :href="`${item.destination}`"
             class="nav-item"
           >
             {{ item.navitem }}
           </b-nav-item>
+          <b-nav-item class="d-md-none">
+            Join the server
+          </b-nav-item>
         </b-navbar-nav>
-
-        <!-- Right aligned nav items -->
-        <b-navbar-nav class="ml-auto">
+        <b-navbar-nav class="ml-auto d-md-block d-none">
           <b-button href="/join" variant="outline-light">
-            Join Game
+            Join the server
           </b-button>
         </b-navbar-nav>
       </b-collapse>
@@ -50,10 +49,6 @@ export default {
         {
           navitem: 'FAQ',
           destination: '/faq'
-        },
-        {
-          navitem: 'Achievement',
-          destination: '/achievement'
         }
       ]
     }
