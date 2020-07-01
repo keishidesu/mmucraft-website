@@ -30,6 +30,7 @@ body {
   background-image: url('~assets/img/bg-mmucraft.jpg');
   background-size: cover;
   background-attachment: fixed;
+  color: white;
 }
 
 .footer {
@@ -40,6 +41,19 @@ body {
 
 .bg-none {
   background-color: rgba(255,255,255,0)
+}
+
+.gl-bg-white-10 {
+  background-color: rgba(255,255,255,0.1);
+}
+
+.gl-bg-white-30 {
+  background-color: rgba(255,255,255,0.3);
+}
+
+.mc-title {
+  font-family: 'Bungee Inline', cursive;
+  text-align: center;
 }
 
 /* Animation */
