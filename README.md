@@ -39,8 +39,12 @@ mypage.vue (~/pages/mypage.vue)
 
 <template>
   <div>
-    <component1 />
-    <component2 />
+    <div>
+      <component1 />
+    </div>
+    <div>
+      <component2 />
+     </div>
   </div>
 </template>
 ```
