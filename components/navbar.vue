@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-navbar toggleable="lg" type="dark" class="bg-dark py-2">
+    <b-navbar toggleable="lg" type="dark" class="fixed-top bg-dark py-2">
       <b-navbar-brand href="/">
         MMUC
       </b-navbar-brand>
