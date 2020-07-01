@@ -30,6 +30,7 @@ If you are unfamiliar with Bootstrap, this is the [documentation](https://getboo
 
 - Define CSS __only__ at `layouts` and `components`
 - Only define CSS classes when necessary and try make them re-usable
+- Use __rem__ for sizing
 
 ## Pages
 Pages can __only__ include components. For example:
