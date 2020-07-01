@@ -1,7 +1,7 @@
 <template>
   <div class="container-fluid">
-    <div class="mt-3 row justify-content-center">
-      <div class="mt-3 col-12 col-md-8 position-relative text-light">
+    <div class="mt-5 row justify-content-center">
+      <div class="mt-5 col-12 col-md-8 position-relative text-light">
         <div class="animated animatedFadeInUp fadeInUp card mb-0 bg-dark text-light  shadow-lg">
           <h4 class="mt-4 text-center text-white gl-font font-weight-bolder" style="font-size: 40px;text-shadow: 2px 6px 3px #000000;">
             Server Rules

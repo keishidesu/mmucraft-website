@@ -38,8 +38,8 @@ body {
   width: 100%;
 }
 
-.mc-title {
-  font-family: 'Bungee Inline', cursive;
+.bg-none {
+  background-color: rgba(255,255,255,0)
 }
 
 /* Animation */
