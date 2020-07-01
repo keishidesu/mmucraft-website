@@ -2,7 +2,7 @@
   <div class="bg-dark">
     <b-container class="py-5">
       <div class="d-none d-md-block">
-        <div class="mc-title font-weight-bolder" style="font-size: 3rem;">
+        <div class="mc-title text-center font-weight-bolder" style="font-size: 3rem;">
           {{ sectionTitle }}
           <b-button v-b-toggle.collapse-start variant="outline-light" class="m-1">
             <i class="fa fa-chevron-down" />

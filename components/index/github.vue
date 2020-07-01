@@ -1,7 +1,7 @@
 <template>
   <b-col cols="12" lg="4" class="mt-3">
     <div class="card gl-bg-white-30 rounded shadow">
-      <div class="card-header mc-title font-weight-bolder" style="font-size: 1.5rem;">
+      <div class="card-header text-center mc-title font-weight-bolder" style="font-size: 1.5rem;">
         Github
       </div>
       <div class="card-body text-white text-center">

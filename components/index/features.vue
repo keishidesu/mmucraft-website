@@ -2,12 +2,12 @@
   <div class="bg-mmucraft">
     <b-container class="py-5">
       <div class="d-none d-md-block">
-        <div class="mc-title font-weight-bolder" style="font-size: 3rem;">
+        <div class="mc-title text-center font-weight-bolder" style="font-size: 3rem;">
           {{ sectionTitle }}
         </div>
       </div>
       <div class="d-md-none">
-        <div class="mc-title font-weight-bolder" style="font-size: 1.5rem;">
+        <div class="mc-title text-center font-weight-bolder" style="font-size: 1.5rem;">
           {{ sectionTitle }}
         </div>
       </div>

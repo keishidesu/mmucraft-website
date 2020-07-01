@@ -1,7 +1,7 @@
 <template>
   <b-col cols="12" lg="8" class="mt-3">
     <div class="card rounded gl-bg-white-10 shadow">
-      <div class="card-header mc-title font-weight-bolder" style="color:red; font-size:1.5rem">
+      <div class="card-header text-center mc-title font-weight-bolder" style="color:red; font-size:1.5rem">
         Announcement
       </div>
       <div class="card-body">

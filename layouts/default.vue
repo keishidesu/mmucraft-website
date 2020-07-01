@@ -33,10 +33,10 @@ body {
   color: white;
 }
 
-.footer {
-  position: absolute;
+.footer{
   bottom: 0;
   width: 100%;
+  opacity: 0.7;
 }
 
 .bg-none {
@@ -53,7 +53,6 @@ body {
 
 .mc-title {
   font-family: 'Bungee Inline', cursive;
-  text-align: center;
 }
 
 /* Animation */
