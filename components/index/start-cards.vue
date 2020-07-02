@@ -34,9 +34,9 @@ export default {
         },
         {
           image: 'netherstar',
-          title: 'Login',
-          desc: 'View your minecraft profile and achievements',
-          destination: '/login'
+          title: 'Read the Rules',
+          desc: 'Make sure to read the rules before you start',
+          destination: '/rules'
         },
         {
           image: 'discord',
@@ -50,7 +50,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
   .info-card:after {
     background: none repeat scroll 0 0 transparent;
     bottom: 0;

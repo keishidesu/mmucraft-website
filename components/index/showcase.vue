@@ -11,15 +11,21 @@
           {{ sectionTitle }}
         </div>
       </div>
+      <Screenshot />
     </b-container>
   </div>
 </template>
 
 <script>
+import Screenshot from '~/components/index/screenshot'
+
 export default {
+  components: {
+    Screenshot
+  },
   data: () => {
     return {
-      sectionTitle: 'Features'
+      sectionTitle: 'Showcase'
     }
   }
 }

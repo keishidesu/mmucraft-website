@@ -15,7 +15,7 @@
         A private minecraft server for MMU
       </div>
       <div class="main-title font-weight-bolder" style="font-size: 2rem;">
-        <i class="fa fa-users" /> {{ displayUserCount }}
+        <i class="fa fa-users" /> {{ users_online }}
       </div>
     </b-card>
   </b-container>
@@ -24,9 +24,11 @@
 <script>
 
 export default {
-  data: () => ({
-    displayUserCount: 0
-  })
+  data () {
+    return {
+      users_online: '0'
+    }
+  }
 }
 </script>
 

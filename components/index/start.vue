@@ -29,7 +29,10 @@
       </div>
       <b-row class="mt-5">
         <Anouncement />
-        <Github />
+        <b-col cols="12" lg="4" class="mt-3">
+          <ServerStat />
+          <Github />
+        </b-col>
       </b-row>
     </b-container>
   </div>
@@ -39,12 +42,14 @@
 import StartCard from '~/components/index/start-cards'
 import Anouncement from '~/components/index/anouncement'
 import Github from '~/components/index/github'
+import ServerStat from '~/components/index/serverstat'
 
 export default {
   components: {
     StartCard,
     Anouncement,
-    Github
+    Github,
+    ServerStat
   },
   data: () => {
     return {
