@@ -4,7 +4,7 @@
       {{ sectionTitle }}
     </MCTitle>
     <div class="card-body p-3">
-      <div class="text-center text-danger" style="font-size:1.1rem">
+      <div class="text-center text-danger">
         Any action performed by any player that any admin consider as a threat to community and server will result in permanent ban.<br>
         Think of yourself and behave. Report to us if you found any harmful player.
       </div>

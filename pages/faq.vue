@@ -1,9 +1,17 @@
 <template>
-  <div />
+  <div>
+    <div>
+      <FaqBoard />
+    </div>
+  </div>
 </template>
 
 <script>
-export default {
+import FaqBoard from '~/components/faq/faq-board'
 
+export default {
+  components: {
+    FaqBoard
+  }
 }
 </script>

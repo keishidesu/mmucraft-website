@@ -15,7 +15,7 @@ export default {
   .mc-title {
     font-family: 'Bungee Inline', cursive;
     font-weight: bolder;
-    font-size: 2rem;
+    font-size: 1.7rem;
     text-align: center;
   }
 }
