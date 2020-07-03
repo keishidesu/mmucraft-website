@@ -1,0 +1,32 @@
+{
+  "rules": {
+    "Chat & Behaviour": {
+      "title": "Chat & Behaviour",
+      "descs": [
+        "Strictly no agressive religious, political or sexual talks in chat. You can make evil jokes with your friends but do not get too over with it. Offenders will get muted. Furthermore, we take online bullying as a very serious offense. Any players who got reported with enough evidence will result in permanent ban."
+      ]    
+    },
+    "Rules of Creative World": {
+      "title": "Rules of Creative World",
+      "descs": [
+        "No mass TNT (If found out, we will ban this action)",
+        "No mass burning (If found out, we will ban this action)",
+        "Do not disturb other players when they are serious on their own things",
+        "Do not mass create entities",
+        "No flying machine or any heavily repetitive redstone contraption"
+      ]
+    },
+    "Report": {
+      "title": "Report",
+      "descs": [
+        "Before you report a player: Take screenshots or any other evidence you can possibly provide. Else, it is very difficult for us to verify the truth."
+      ]    
+    },
+    "AFK Players": {
+      "title": "AFK Players",
+      "descs": [
+        "The server will force you to go offline if you AFK for over 6 hours. (AFK Fishing is not considered as AFK)"
+      ]    
+    }
+  }
+}

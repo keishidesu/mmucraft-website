@@ -27,7 +27,6 @@ export default {
 body {
   height: 100%;
   font-family: 'Patrick Hand', cursive;
-  font-size: 1.1rem;
   background-image: url('~assets/img/bg-mmucraft.jpg');
   background-size: cover;
   background-attachment: fixed;
