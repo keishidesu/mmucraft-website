@@ -2,14 +2,14 @@
   <div class="bg-mmucraft">
     <b-container class="py-5">
       <div class="d-none d-md-block">
-        <div class="mc-title text-center font-weight-bolder" style="font-size: 3rem;">
+        <MCTitle>
           {{ sectionTitle }}
-        </div>
+        </MCTitle>
       </div>
       <div class="d-md-none">
-        <div class="mc-title text-center font-weight-bolder" style="font-size: 1.5rem;">
+        <MCSubtitle class="text-center">
           {{ sectionTitle }}
-        </div>
+        </MCSubtitle>
       </div>
       <Screenshot />
     </b-container>
@@ -17,10 +17,14 @@
 </template>
 
 <script>
+import MCTitle from '~/components/mc/mc-title'
+import MCSubtitle from '~/components/mc/mc-subtitle'
 import Screenshot from '~/components/index/screenshot'
 
 export default {
   components: {
+    MCTitle,
+    MCSubtitle,
     Screenshot
   },
   data: () => {

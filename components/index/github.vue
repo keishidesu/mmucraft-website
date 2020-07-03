@@ -1,7 +1,7 @@
 <template>
   <div class="card gl-bg-white-30 mt-3 rounded shadow">
-    <div class="card-header text-center mc-title font-weight-bolder" style="font-size: 1.5rem;">
-      Github
+    <div class="card-header text-center">
+      <MCSubtitle>Github</MCSubtitle>
     </div>
     <div class="card-body text-white text-center">
       <b-img src="/getstart/github.png" />
@@ -27,7 +27,12 @@
 </template>
 
 <script>
+import MCSubtitle from '~/components/mc/mc-subtitle'
+
 export default {
+  components: {
+    MCSubtitle
+  },
   data: () => {
     return {
       items: [

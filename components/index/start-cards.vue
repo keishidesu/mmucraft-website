@@ -7,15 +7,17 @@
         cols="12"
         lg="3"
       >
-        <b-card class="info-card bg-none text-center mt-3 h-100 border-0">
-          <b-img :src="`/getstart/${card.image}.png`" />
-          <b-card-title>
-            {{ card.title }}
-          </b-card-title>
-          <b-card-text>
-            {{ card.desc }}
-          </b-card-text>
-        </b-card>
+        <a :href="`${card.destination}`">
+          <b-card class="info-card bg-none text-center mt-3 h-100 border-0">
+            <b-img :src="`/getstart/${card.image}.png`" />
+            <b-card-title>
+              {{ card.title }}
+            </b-card-title>
+            <b-card-text>
+              {{ card.desc }}
+            </b-card-text>
+          </b-card>
+        </a>
       </b-col>
     </b-row>
   </div>
@@ -42,7 +44,7 @@ export default {
           image: 'discord',
           title: 'Discord Us',
           desc: 'Join our community in our discord server',
-          destination: ''
+          destination: 'https://discord.com/invite/jMtqPjH'
         }
       ]
     }
@@ -51,6 +53,11 @@ export default {
 </script>
 
 <style scoped>
+  a {
+    text-decoration: none;
+    color: white;
+  }
+
   .info-card:after {
     background: none repeat scroll 0 0 transparent;
     bottom: 0;

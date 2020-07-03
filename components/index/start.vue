@@ -2,20 +2,20 @@
   <div class="bg-dark">
     <b-container class="py-5">
       <div class="d-none d-md-block">
-        <div class="mc-title text-center font-weight-bolder" style="font-size: 3rem;">
+        <MCTitle>
           {{ sectionTitle }}
           <b-button v-b-toggle.collapse-start variant="outline-light" class="m-1">
             <i class="fa fa-chevron-down" />
           </b-button>
-        </div>
+        </MCTitle>
       </div>
       <div class="d-md-none">
-        <div class="mc-title font-weight-bolder" style="font-size: 1.5rem;">
+        <MCSubtitle class="text-center">
           {{ sectionTitle }}
           <b-button v-b-toggle.collapse-start variant="outline-light" class="m-1">
             <i class="fa fa-chevron-down" />
           </b-button>
-        </div>
+        </MCSubtitle>
       </div>
       <b-collapse id="collapse-start">
         <b-card class="border-0 bg-none text-center">
@@ -39,6 +39,8 @@
 </template>
 
 <script>
+import MCTitle from '~/components/mc/mc-title'
+import MCSubtitle from '~/components/mc/mc-subtitle'
 import StartCard from '~/components/index/start-cards'
 import Anouncement from '~/components/index/anouncement'
 import Github from '~/components/index/github'
@@ -46,6 +48,8 @@ import ServerStat from '~/components/index/serverstat'
 
 export default {
   components: {
+    MCTitle,
+    MCSubtitle,
     StartCard,
     Anouncement,
     Github,

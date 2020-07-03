@@ -1,7 +1,7 @@
 <template>
   <div class="card gl-bg-white-30 rounded shadow">
-    <div class="card-header text-center mc-title font-weight-bolder" style="font-size: 1.5rem;">
-      Server Status
+    <div class="card-header text-center">
+      <MCSubtitle>Server Status</MCSubtitle>
     </div>
     <b-row class="justify-content-center">
       <b-col cols="5" class="card-body text-white text-center">
@@ -18,7 +18,12 @@
 </template>
 
 <script>
+import MCSubtitle from '~/components/mc/mc-subtitle'
+
 export default {
+  components: {
+    MCSubtitle
+  },
   data () {
     return {
       name: 'Survival',
