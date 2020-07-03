@@ -1,0 +1,16 @@
+{
+  "commands": {
+    "Auth": {
+      "login": {
+        "usage": "Use this command to login",
+        "parameters": [
+          { "name": "password", "example": "goldenduck321" }
+        ]
+      },
+      "logout": {
+        "usage": "Use this command to log out and return to lobby",
+        "parameters": []
+      }
+    }
+  }
+}
