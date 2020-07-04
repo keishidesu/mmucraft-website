@@ -2,6 +2,9 @@
   <div>
     <navbar />
     <Nuxt />
+    <div>
+      <MCDiscord />
+    </div>
     <div class="footer">
       <Footer />
     </div>
@@ -11,11 +14,13 @@
 <script>
 import Navbar from '~/components/navbar'
 import Footer from '~/components/footer'
+import MCDiscord from '~/components/mc/mc-discordbtn'
 
 export default {
   components: {
     Navbar,
-    Footer
+    Footer,
+    MCDiscord
   }
 }
 </script>
