@@ -9,17 +9,20 @@
       </div>
     </div>
     <hr>
+    <JoinCard />
   </MCBoard>
 </template>
 
 <script>
 import MCBoard from '~/components/mc/mc-board'
 import MCTitle from '~/components/mc/mc-title'
+import JoinCard from '~/components/join/join-card'
 
 export default {
   components: {
     MCBoard,
-    MCTitle
+    MCTitle,
+    JoinCard
   },
   data: () => {
     return {
