@@ -1,6 +1,6 @@
 <template>
   <div class="bg-dark">
-    <b-container class="py-5">
+    <b-container class="py-5 animated fadeInUp">
       <MCTitle>
         {{ sectionTitle }}
         <b-button v-b-toggle.collapse-start variant="outline-light" class="m-1">

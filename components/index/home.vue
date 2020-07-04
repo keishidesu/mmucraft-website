@@ -1,6 +1,6 @@
 <template>
   <b-container>
-    <b-card class="vertical-center bg-none border-0">
+    <b-card class="vertical-center bg-none border-0 animated fadeInUp">
       <div class="d-none d-md-block">
         <div class="main-title font-weight-bolder" style="font-size: 6rem;">
           MMUCRAFT

@@ -1,9 +1,17 @@
 <template>
-  <div />
+  <div>
+    <div>
+      <JoinBoard />
+    </div>
+  </div>
 </template>
 
 <script>
-export default {
+import JoinBoard from '~/components/join/join-board'
 
+export default {
+  components: {
+    JoinBoard
+  }
 }
 </script>
