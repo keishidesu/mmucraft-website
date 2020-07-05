@@ -4,7 +4,7 @@
       {{ sectionTitle }}
     </MCTitle>
     <hr>
-    <div v-for="(faq,key) in faqs" :key="`faq-${key}`" v-html="faq">
+    <div v-for="(faq,key) in faqs" :key="`faq-${key}`">
       <div class="card-body" style="padding: 0 1rem">
         <FaqCard
           :id="key"
