@@ -1,35 +1,38 @@
 <template>
-  <b-col cols="12" lg="4" class="mt-3">
-    <div class="card gl-bg-white-30 rounded shadow">
-      <div class="card-header text-center mc-title font-weight-bolder" style="font-size: 1.5rem;">
-        Github
-      </div>
-      <div class="card-body text-white text-center">
-        <b-img src="/getstart/github.png" />
-        <b-row
-          v-for="(item,i) in items"
-          :key="`item-${i}`"
-          class="mt-3 justify-content-center"
-        >
-          <b-col cols="2" class="mr-2">
-            <b-img :src="`/getstart/${item.image}.png`" class="mr-2" />
-          </b-col>
-          <b-col cols="5" class="text-left">
-            <div>
-              {{ item.title }}
-            </div>
-            <a :href="item.link" target="_blank">
-              See repository
-            </a>
-          </b-col>
-        </b-row>
-      </div>
+  <div class="card gl-bg-white-30 mt-3 rounded shadow">
+    <div class="card-header text-center">
+      <MCSubtitle>Github</MCSubtitle>
     </div>
-  </b-col>
+    <div class="card-body text-white text-center">
+      <b-img src="/getstart/github.png" />
+      <b-row
+        v-for="(item,i) in items"
+        :key="`item-${i}`"
+        class="mt-3 justify-content-center"
+      >
+        <b-col cols="2" class="mr-2">
+          <b-img :src="`/getstart/${item.image}.png`" class="mr-2" />
+        </b-col>
+        <b-col cols="5" sm="7" class="text-left">
+          <div>
+            {{ item.title }}
+          </div>
+          <a :href="item.link" target="_blank">
+            See repository
+          </a>
+        </b-col>
+      </b-row>
+    </div>
+  </div>
 </template>
 
 <script>
+import MCSubtitle from '~/components/mc/mc-subtitle'
+
 export default {
+  components: {
+    MCSubtitle
+  },
   data: () => {
     return {
       items: [
@@ -54,7 +57,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 a {
   color: rgb(0,0,128)
 }

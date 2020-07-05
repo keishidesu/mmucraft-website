@@ -67,20 +67,12 @@ export default {
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
-    prefix: '/api',
-    proxy: true,
+    proxy: false,
     headers: { 
-      post: { 'api': api_key }
-    }
-  },
-  /*
-  ** Host configuration
-  */
-  proxy: {
-    '/api': {
-      target: api_url,
-      pathRewrite: { '^/api': '' }
-    }
+      post: { 'api': api_key },
+      'Access-Control-Allow-Origin': '*'
+    },
+    baseURL: api_url
   },
   /*
   ** Build configuration

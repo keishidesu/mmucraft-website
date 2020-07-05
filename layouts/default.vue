@@ -2,6 +2,9 @@
   <div>
     <navbar />
     <Nuxt />
+    <div>
+      <MCDiscord />
+    </div>
     <div class="footer">
       <Footer />
     </div>
@@ -11,11 +14,13 @@
 <script>
 import Navbar from '~/components/navbar'
 import Footer from '~/components/footer'
+import MCDiscord from '~/components/mc/mc-discordbtn'
 
 export default {
   components: {
     Navbar,
-    Footer
+    Footer,
+    MCDiscord
   }
 }
 </script>
@@ -43,16 +48,18 @@ body {
   background-color: rgba(255,255,255,0)
 }
 
+.bg-mmucraft {
+  background-image:url('~assets/img/bg-features.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 .gl-bg-white-10 {
   background-color: rgba(255,255,255,0.1);
 }
 
 .gl-bg-white-30 {
   background-color: rgba(255,255,255,0.3);
-}
-
-.mc-title {
-  font-family: 'Bungee Inline', cursive;
 }
 
 /* Animation */

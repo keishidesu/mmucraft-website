@@ -1,22 +1,12 @@
 <template>
   <div class="bg-dark">
-    <b-container class="py-5">
-      <div class="d-none d-md-block">
-        <div class="mc-title text-center font-weight-bolder" style="font-size: 3rem;">
-          {{ sectionTitle }}
-          <b-button v-b-toggle.collapse-start variant="outline-light" class="m-1">
-            <i class="fa fa-chevron-down" />
-          </b-button>
-        </div>
-      </div>
-      <div class="d-md-none">
-        <div class="mc-title font-weight-bolder" style="font-size: 1.5rem;">
-          {{ sectionTitle }}
-          <b-button v-b-toggle.collapse-start variant="outline-light" class="m-1">
-            <i class="fa fa-chevron-down" />
-          </b-button>
-        </div>
-      </div>
+    <b-container class="py-5 animated fadeInUp">
+      <MCTitle>
+        {{ sectionTitle }}
+        <b-button v-b-toggle.collapse-start variant="outline-light" class="m-1">
+          <i class="fa fa-chevron-down" />
+        </b-button>
+      </MCTitle>
       <b-collapse id="collapse-start">
         <b-card class="border-0 bg-none text-center">
           <div>
@@ -29,22 +19,29 @@
       </div>
       <b-row class="mt-5">
         <Anouncement />
-        <Github />
+        <b-col cols="12" lg="4" class="mt-3">
+          <ServerStat />
+          <Github />
+        </b-col>
       </b-row>
     </b-container>
   </div>
 </template>
 
 <script>
+import MCTitle from '~/components/mc/mc-title'
 import StartCard from '~/components/index/start-cards'
 import Anouncement from '~/components/index/anouncement'
 import Github from '~/components/index/github'
+import ServerStat from '~/components/index/serverstat'
 
 export default {
   components: {
+    MCTitle,
     StartCard,
     Anouncement,
-    Github
+    Github,
+    ServerStat
   },
   data: () => {
     return {

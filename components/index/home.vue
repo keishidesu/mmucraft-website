@@ -1,6 +1,6 @@
 <template>
   <b-container>
-    <b-card class="vertical-center bg-none border-0">
+    <b-card class="vertical-center bg-none border-0 animated fadeInUp">
       <div class="d-none d-md-block">
         <div class="main-title font-weight-bolder" style="font-size: 6rem;">
           MMUCRAFT
@@ -15,7 +15,7 @@
         A private minecraft server for MMU
       </div>
       <div class="main-title font-weight-bolder" style="font-size: 2rem;">
-        <i class="fa fa-users" /> {{ displayUserCount }}
+        <i class="fa fa-users" /> {{ users_online }}
       </div>
     </b-card>
   </b-container>
@@ -24,9 +24,11 @@
 <script>
 
 export default {
-  data: () => ({
-    displayUserCount: 0
-  })
+  data () {
+    return {
+      users_online: '0'
+    }
+  }
 }
 </script>
 

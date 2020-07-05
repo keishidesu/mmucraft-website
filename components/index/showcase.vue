@@ -4,23 +4,23 @@
       <MCTitle>
         {{ sectionTitle }}
       </MCTitle>
-      <FeatureCards />
+      <Screenshot />
     </b-container>
   </div>
 </template>
 
 <script>
 import MCTitle from '~/components/mc/mc-title'
-import FeatureCards from '~/components/index/feature-cards'
+import Screenshot from '~/components/index/screenshot'
 
 export default {
   components: {
     MCTitle,
-    FeatureCards
+    Screenshot
   },
   data: () => {
     return {
-      sectionTitle: 'Features'
+      sectionTitle: 'Showcase'
     }
   }
 }

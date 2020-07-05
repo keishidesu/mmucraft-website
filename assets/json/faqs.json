@@ -1,0 +1,36 @@
+{
+  "faqs": {
+    "1": {
+      "question": "I can't login into the server!",
+      "answer" : "Make sure you use the same username as the registered username for MMUCraft. If you haven't register an account for this server, please go to here and follow the instructions."
+    },
+    "2": {
+      "question": "How can I get back to spawn?",
+      "answer" : "Answer2"
+    },
+    "3": {
+      "question": "Can cracked Minecraft client join this server?",
+      "answer" : "Answer3"
+    },
+    "4": {
+      "question": "I slept in a bed but my respawn point is not reset!",
+      "answer" : "Answer4"
+    },
+    "5": {
+      "question": "Other players seems like ignoring my chat.",
+      "answer" : "Answer5"
+    },
+    "6": {
+      "question": "No TP, Claim, sethome for survival?",
+      "answer" : "Answer6"
+    },
+    "7": {
+      "question": "How to join Creative Area?",
+      "answer" : "Answer7"
+    },
+    "8": {
+      "question": "How do I change my password?",
+      "answer" : "Answer8"
+    }
+  }
+}
