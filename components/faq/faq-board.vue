@@ -5,7 +5,7 @@
     </MCTitle>
     <hr>
     <div v-for="(faq,key) in faqs" :key="`faq-${key}`">
-      <div class="card-body" style="padding: 0 1rem">
+      <div class="card-body px-4 py-0">
         <FaqCard
           :id="key"
           :question="faq.question"
