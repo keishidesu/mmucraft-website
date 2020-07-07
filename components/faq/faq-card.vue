@@ -1,11 +1,13 @@
 <template>
   <div v-if="id">
-    <b-button v-if="question" v-b-toggle="`collapse-${id}`" variant="light">
-      {{ question }}
-    </b-button>
+    <h2>
+      <b-button v-if="question" v-b-toggle="`collapse-${id}`" variant="light">
+        {{ question }}
+      </b-button>
+    </h2>
     <b-collapse :id="`collapse-${id}`" accordion="my-accordion" role="tabpanel">
       <b-card class="border-0 bg-dark">
-        <p v-if="answer" class="card-text">
+        <p v-if="answer" class="card-text" v-html="answer">
           {{ answer }}
         </p>
       </b-card>
