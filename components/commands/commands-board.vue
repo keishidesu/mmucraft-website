@@ -1,9 +1,9 @@
 <template>
   <MCBoard>
-    <MCTitle class="mt-4" style="text-shadow: 2px 6px 3px #000000;">
+    <MCTitle class="mt-4" :textShadow="true">
       {{ sectionTitle }}
     </MCTitle>
-    <div class="card-body p-3">
+    <div class="p-3">
       <div class="text-center">
         <div>
           Here are some useful commands and special prefixes that players can use in game. To use the command, type "/" in chat then follow by the command you wish. You may notice there are actually tons of commands listing in game. Mostly are not for player use.

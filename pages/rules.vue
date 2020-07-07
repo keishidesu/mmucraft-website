@@ -1,8 +1,6 @@
 <template>
   <div>
-    <div>
-      <RulesBoard />
-    </div>
+    <RulesBoard />
   </div>
 </template>
 

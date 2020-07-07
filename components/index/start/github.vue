@@ -1,24 +1,21 @@
 <template>
   <div class="card gl-bg-white-30 mt-3 rounded shadow">
     <div class="card-header text-center">
-      <MCSubtitle>Github</MCSubtitle>
+      <MCSubtitle>Repositories</MCSubtitle>
     </div>
     <div class="card-body text-white text-center">
       <b-img src="/getstart/github.png" />
       <b-row
         v-for="(item,i) in items"
         :key="`item-${i}`"
-        class="mt-3 justify-content-center"
+        class="mt-3 justify-content-center text-left"
       >
-        <b-col cols="2" class="mr-2">
-          <b-img :src="`/getstart/${item.image}.png`" class="mr-2" />
-        </b-col>
-        <b-col cols="5" sm="7" class="text-left">
-          <div>
-            {{ item.title }}
-          </div>
+        <b-col class="mr-2">
           <a :href="item.link" target="_blank">
-            See repository
+            <b-img :src="`/getstart/${item.image}.png`" class="mx-5 d-inline icon" />
+            <h3 class="d-inline">
+              {{ item.title }}
+            </h3>
           </a>
         </b-col>
       </b-row>
@@ -38,7 +35,7 @@ export default {
       items: [
         {
           image: 'diamond',
-          title: 'MMUCraft Website',
+          title: 'Website',
           link: 'https://github.com/keishidesu/mmucraft-website'
         },
         {
@@ -59,10 +56,14 @@ export default {
 
 <style scoped>
 a {
-  color: rgb(0,0,128)
+  color: rgba(255, 255, 255, .9);
+  text-decoration: none;
+  transition: 250ms;
 }
 
 a:hover {
-  color: rgb(0,0,128)
+  color: rgba(255, 255, 255, .95);
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, .6);
 }
+
 </style>

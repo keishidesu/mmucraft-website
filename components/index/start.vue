@@ -2,10 +2,9 @@
   <div class="bg-dark">
     <b-container class="py-5 animated fadeInUp">
       <MCTitle>
-        {{ sectionTitle }}
-        <b-button v-b-toggle.collapse-start variant="outline-light" class="m-1">
-          <i class="fa fa-chevron-down" />
-        </b-button>
+        <a v-b-toggle.collapse-start>
+          {{ sectionTitle }}
+        </a>
       </MCTitle>
       <b-collapse id="collapse-start">
         <b-card class="border-0 bg-none text-center">
@@ -30,10 +29,10 @@
 
 <script>
 import MCTitle from '~/components/mc/mc-title'
-import StartCard from '~/components/index/start-cards'
-import Anouncement from '~/components/index/anouncement'
-import Github from '~/components/index/github'
-import ServerStat from '~/components/index/serverstat'
+import StartCard from '~/components/index/start/start-cards'
+import Anouncement from '~/components/index/start/anouncement'
+import Github from '~/components/index/start/github'
+import ServerStat from '~/components/index/start/serverstat'
 
 export default {
   components: {
@@ -52,6 +51,13 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+a {
+  cursor: pointer;
+  transition: 250ms;
+}
 
+a:hover {
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, .5);
+}
 </style>

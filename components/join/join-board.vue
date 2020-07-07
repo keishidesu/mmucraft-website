@@ -1,9 +1,9 @@
 <template>
   <MCBoard>
-    <MCTitle class="mt-4" style="text-shadow: 2px 6px 3px #000000;">
+    <MCTitle class="mt-4" :textShadow="true">
       {{ sectionTitle }}
     </MCTitle>
-    <div class="card-body p-3 text-center">
+    <div class="p-3 text-center">
       <div>
         {{ sectionDesc }}
       </div>

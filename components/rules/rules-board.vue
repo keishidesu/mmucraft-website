@@ -1,9 +1,9 @@
 <template>
   <MCBoard>
-    <MCTitle class="mt-4" style="text-shadow: 2px 6px 3px #000000;">
+    <MCTitle class="mt-4" :textShadow="true">
       {{ sectionTitle }}
     </MCTitle>
-    <div class="card-body p-3">
+    <div class="p-3">
       <div class="text-center text-danger">
         Any action performed by any player that any admin consider as a threat to community and server will result in permanent ban.<br>
         Think of yourself and behave. Report to us if you found any harmful player.
