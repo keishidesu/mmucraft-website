@@ -1,6 +1,6 @@
 <template>
   <MCBoard>
-    <MCTitle class="mt-4" :textShadow="true">
+    <MCTitle class="mt-4" :text-shadow="true">
       {{ sectionTitle }}
     </MCTitle>
     <div class="p-3 text-center">

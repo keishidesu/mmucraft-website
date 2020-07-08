@@ -1,15 +1,27 @@
 <template>
   <div v-if="id">
-    <h2>
-      <b-button v-if="question" v-b-toggle="`collapse-${id}`" variant="light">
-        {{ question }}
-      </b-button>
-    </h2>
-    <b-collapse :id="`collapse-${id}`" accordion="my-accordion" role="tabpanel">
+    <a v-if="question" v-b-toggle="id">
+      <span class="when-closed mr-2">
+        +
+      </span>
+      <span class="when-opened mr-2">
+        -
+      </span>
+      {{ question }}
+    </a>
+    <b-collapse :id="id" :accordion="accordion" role="tabpanel">
       <b-card class="border-0 bg-dark">
-        <p v-if="answer" class="card-text" v-html="answer">
-          {{ answer }}
-        </p>
+        <div v-if="answer">
+          <component
+            :is="item.tag"
+            v-for="(item, i) in answer"
+            :key="`faq-questions-${i}`"
+            :href="item.href ? item.href : ''"
+            target="_blank"
+          >
+            {{ item.text }}
+          </component>
+        </div>
       </b-card>
     </b-collapse>
   </div>
@@ -27,6 +39,10 @@ export default {
       required: true
     },
     answer: {
+      type: Array,
+      required: true
+    },
+    accordion: {
       type: String,
       required: true
     }
@@ -34,6 +50,16 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+.collapsed > .when-opened {
+  display: none;
+}
 
+.not-collapsed > .when-closed {
+  display: none;
+}
 </style>

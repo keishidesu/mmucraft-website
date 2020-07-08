@@ -1,15 +1,29 @@
 <template>
-  <span class="gl-pointer badge badge-pill badge-info mr-2" data-toggle="tooltip" data-placement="top">
+  <b-badge
+    v-b-popover.hover.top="content"
+    pill
+    variant="info"
+    class="pointer mx-1"
+    data-placement="top"
+  >
     <slot />
-  </span>
+  </b-badge>
 </template>
 
 <script>
 export default {
-
+  props: {
+    content: {
+      type: String,
+      required: true,
+      default: ''
+    }
+  }
 }
 </script>
 
-<style>
-
+<style scoped>
+  .pointer {
+    cursor: pointer;
+  }
 </style>

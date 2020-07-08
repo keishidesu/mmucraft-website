@@ -15,7 +15,7 @@
           >
             {{ item.navitem }}
           </b-nav-item>
-          <b-nav-item class="d-md-none">
+          <b-nav-item href="/join" class="d-md-none">
             Join the server
           </b-nav-item>
         </b-navbar-nav>

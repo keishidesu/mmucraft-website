@@ -1,32 +1,34 @@
 {
   "rules": {
-    "Chat & Behaviour": {
-      "title": "Chat & Behaviour",
-      "descs": [
-        "Strictly no agressive religious, political or sexual talks in chat. You can make evil jokes with your friends but do not get too over with it. Offenders will get muted. Furthermore, we take online bullying as a very serious offense. Any players who got reported with enough evidence will result in permanent ban."
-      ]    
-    },
-    "Rules of Creative World": {
-      "title": "Rules of Creative World",
-      "descs": [
-        "No mass TNT (If found out, we will ban this action)",
-        "No mass burning (If found out, we will ban this action)",
-        "Do not disturb other players when they are serious on their own things",
-        "Do not mass create entities",
-        "No flying machine or any heavily repetitive redstone contraption"
-      ]
-    },
-    "Report": {
-      "title": "Report",
-      "descs": [
-        "Before you report a player: Take screenshots or any other evidence you can possibly provide. Else, it is very difficult for us to verify the truth."
-      ]    
-    },
-    "AFK Players": {
-      "title": "AFK Players",
-      "descs": [
-        "The server will force you to go offline if you AFK for over 6 hours. (AFK Fishing is not considered as AFK)"
-      ]    
-    }
+    "Chat & Behaviour": [
+      "Keep the chat family friendly",
+      "Treat others with respect",
+      "As Malaysia is a multi-racial/cultural society, please do not raise sensitive issues such as religion"
+    ],
+    "Servers Regulation": [
+      "We have the rights to temporary or permanently forbid any player to enter any server or the whole network when applicable",
+      "We have the rights to remove or edit your creations if they drastically slow down the server.",
+      "Attempts to disable the server, manipulate server behaviour, or gaining forbidden information from the server is a serious offense",
+      "Do not attempt to gain access to other accounts that does not belong to you",
+      "Clients that allow players to play Minecraft in an unintended way are forbidden and will be viewed as a threat to the server"
+    ],
+    "Content Creation": [
+      "All your creations on this platform belongs to you and have no association with us",
+      "We bear no responsibility on any loss or damage of your creations",
+      "We have the rights to remove any creations when applicable"
+    ],
+    "AFK": [
+      "You may AFK in the server, but we might force you to go offline depending on the situation"
+    ],
+    "Data": [
+      "Your email address will be recorded for security purposes",
+      "Your in-game activities, chats, and command usages will be logged",
+      "Your password is stored securely in salted hash form",
+      "Any Minecraft related gameplay data within the servers will be stored"
+    ],
+    "Report": [
+      "Please provide as much evidence as possible for us to verify",
+      "Purposely filing false reports will only make us lose trust in you"
+    ]
   }
 }

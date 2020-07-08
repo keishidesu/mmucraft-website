@@ -4,12 +4,13 @@
       {{ sectionTitle }}
     </MCTitle>
     <hr>
-    <div v-for="(faq,key) in faqs" :key="`faq-${key}`">
-      <div class="card-body px-4 py-0">
+    <div v-for="(faq, key) in faqs" :key="`faq-${key}`">
+      <div class="px-4 py-0">
         <FaqCard
-          :id="key"
+          :id="`faq-card-${key}`"
           :question="faq.question"
           :answer="faq.answer"
+          accordion="faq-accordion"
         />
       </div>
       <hr>
