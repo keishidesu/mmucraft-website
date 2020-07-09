@@ -17,7 +17,7 @@
     {
       "question": "I slept in a bed but my respawn point is not reset!",
       "answer": [
-        { "tag": "span", "text": "The surroundings of your bed must be suitable for respawn. Blocks and stabs will cause the bed unable to respawn player. Thus, remember to have some space around your bed to avoid this from happening." }
+        { "tag": "span", "text": "The surroundings of your bed must be suitable for respawn. Blocks and slabs will cause the bed unable to respawn player. Thus, remember to have some space around your bed to avoid this from happening." }
       ]
     },
     {

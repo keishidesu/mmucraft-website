@@ -3,7 +3,7 @@
     <b-container class="py-5 animated fadeInUp">
       <MCTitle>
         <a v-b-toggle.collapse-start>
-          {{ sectionTitle }}
+          Getting Started
         </a>
       </MCTitle>
       <b-collapse id="collapse-start">
@@ -44,7 +44,6 @@ export default {
   },
   data: () => {
     return {
-      sectionTitle: 'Getting Started',
       desc: 'MMUCraft is an offline-mode Minecraft server which allows cracked Minecraft clients to join. This is server for players to enjoy the original survival game of Minecraft. Join us with your friends now!'
     }
   }

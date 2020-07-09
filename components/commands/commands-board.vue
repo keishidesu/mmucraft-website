@@ -28,6 +28,7 @@
             :item="c_key"
             :usage="comm.usage"
             :parameters="comm.parameters"
+            :slash="(comm.slash !== undefined) ? comm.slash : true"
           />
           <hr>
         </div>

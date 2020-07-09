@@ -2,14 +2,44 @@
   "commands": {
     "Auth": {
       "login": {
-        "usage": "Use this command to login",
+        "usage": "Use this command to login.",
         "parameters": [
           { "name": "password", "example": "goldenduck321" }
         ]
       },
       "logout": {
-        "usage": "Use this command to log out and return to lobby",
+        "usage": "Use this command to log out and return to lobby.",
         "parameters": []
+      }
+    },
+    "Movement": {
+      "ap warp lobby": {
+        "usage": "Teleport yourself back to the lobby server.",
+        "parameters": []
+      },
+      "ap warp creative_lobby": {
+        "usage": "Teleport yourself back to the creative server's lobby. Only works in creative server.",
+        "parameters": []
+      },
+      "ap warp center": {
+        "usage": "Put yourself back in the center of lobby server. Only works in lobby server.",
+        "parameters": []
+      }
+    },
+    "Chat Prefix": {
+      "!": {
+        "usage": "Send you message across the server. Messages without this prefix will only seen by players within 250 block radius range.",
+        "parameters": [
+          { "name": "message", "example": "hi, anyone got location for ocean monument?" }
+        ],
+        "slash": false
+      },
+      "!!": {
+        "usage": "Send you message across the server and also to the specific channel in the Discord server.",
+        "parameters": [
+          { "name": "message", "example": "hi Discord!" }
+        ],
+        "slash": false
       }
     }
   }
