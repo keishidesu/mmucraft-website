@@ -1,19 +1,16 @@
 <template>
   <MCBoard>
-    <MCTitle class="mt-4" style="text-shadow: 2px 6px 3px #000000;">
-      {{ sectionTitle }}
+    <MCTitle class="mt-4" :text-shadow="true">
+      Rules and Agreements
     </MCTitle>
-    <div class="card-body p-3">
-      <div class="text-center text-danger">
-        Any action performed by any player that any admin consider as a threat to community and server will result in permanent ban.<br>
-        Think of yourself and behave. Report to us if you found any harmful player.
-      </div>
+    <div class="text-center text-danger">
+      "MMUC", "We", "Us", and "Our" refers to the team that holds responsibility in developing and maintaining the MMUC Network/Servers.
     </div>
     <hr>
-    <div v-for="(rule, key) in rules" :key="`rule-${key}`" class="card-body">
+    <div v-for="(rule, key) in rules" :key="`rule-${key}`" class="p-3">
       <RulesCard
-        :title="rule.title"
-        :descs="rule.descs"
+        :title="key"
+        :descs="rule"
       />
       <hr>
     </div>
@@ -34,8 +31,7 @@ export default {
   },
   data: () => {
     return {
-      rules,
-      sectionTitle: 'Server Rules'
+      rules
     }
   }
 }

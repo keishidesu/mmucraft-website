@@ -19,7 +19,7 @@ export default {
   ** See https://nuxtjs.org/api/configuration-head
   */
   head: {
-    title: 'MMUCraft',
+    title: 'MMUC Network',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -67,12 +67,9 @@ export default {
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
-    proxy: false,
     headers: { 
       post: { 'api': api_key },
-      'Access-Control-Allow-Origin': '*'
-    },
-    baseURL: api_url
+    }
   },
   /*
   ** Build configuration
@@ -86,5 +83,8 @@ export default {
   server: {
     port: 3000,
     host: '0.0.0.0'
+  },
+  env: {
+    api: api_url
   }
 }

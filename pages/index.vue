@@ -1,17 +1,9 @@
 <template>
   <div>
-    <div>
-      <Home />
-    </div>
-    <div>
-      <Start />
-    </div>
-    <div>
-      <Features />
-    </div>
-    <div>
-      <Showcase />
-    </div>
+    <Home />
+    <Start />
+    <Features />
+    <Showcase />
   </div>
 </template>
 

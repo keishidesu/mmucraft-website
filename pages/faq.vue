@@ -1,8 +1,6 @@
 <template>
   <div>
-    <div>
-      <FaqBoard />
-    </div>
+    <FaqBoard />
   </div>
 </template>
 

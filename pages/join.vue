@@ -1,8 +1,6 @@
 <template>
   <div>
-    <div>
-      <JoinBoard />
-    </div>
+    <JoinBoard />
   </div>
 </template>
 

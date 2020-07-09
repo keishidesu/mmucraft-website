@@ -1,0 +1,38 @@
+{
+  "join": [
+    {
+      "title": "Getting the Invitation Link",
+      "desc": [
+        { "tag": "div", "text": "Smash on this button to get your invitation link:" },
+        { "tag": "button", "href": "/invite", "text": "Get Invitation Here" },
+        { "tag": "div", "text": "You need to provide a email address with whitelisted domain in order to get the invitation link. You should receive an invitation email within a few minutes." }
+      ]
+    },
+    {
+      "title": "Creating an account",
+      "desc": [
+        { "tag": "div", "text": "On account creation page, enter your in-game name and password. Finally, press on the create button." },
+        { "tag": "div", "variant": "danger", "text": "In-game name field represents the name that display in game. It's the 'username' for login authentication. Therefore it MUST match with the in-game name of the account you use!" },
+        { "tag": "div", "text": "We have an independant database, therefore you must register before you can join our server." }
+      ]
+    },
+    {
+      "title": "Joining the Server",
+      "desc": [
+        { "tag": "div", "text": "Make sure the in-game name is matched as the one you registered and the game version is set to the correct version." },
+        { "tag": "div", "text": "Run Minecraft and in Multiplayer, click on Direct Connect, enter the following address:" },
+        { "tag": "quote", "text": "minecraft.mmu.edu.my" },
+        { "tag": "div", "text": "Click connect and you should be able to join the server." }
+      ]
+    },
+    {
+      "title": "Login into the Server",
+      "desc": [
+        { "tag": "div", "text": "Once you get into the server, you will be asked to enter your password. Press '/' to and enter 'login' into the message box following by a space and then your password. It should look something like this:" },
+        { "tag": "quote", "text": "/login mypassword123" },
+        { "tag": "div", "text": "If you get kicked immediately upon connecting the server, means that the in-game name you using is not registered." },
+        { "tag": "div", "text": "Press enter to execute. If your password is correct, you should be able to play the game." }
+      ]
+    }
+  ]
+}

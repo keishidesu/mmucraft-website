@@ -4,9 +4,11 @@
       {{ title }}
     </MCSubtitle>
     <div v-if="descs">
-      <div v-for="desc in descs" :key="`desc-${desc}-${title}`">
-        {{ desc }}
-      </div>
+      <ul>
+        <li v-for="desc in descs" :key="`desc-${desc}-${title}`">
+          {{ desc }}
+        </li>
+      </ul>
     </div>
   </div>
 </template>
