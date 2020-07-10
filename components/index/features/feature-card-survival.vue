@@ -31,7 +31,7 @@ export default {
           header: 'Player spreading system.',
           desc: [
             'Spread players to a random location in a direction.',
-            'Four directions and three distance to choose from.'
+            'Four directions and three distances to choose from.'
           ]
         },
         {
@@ -39,7 +39,7 @@ export default {
           header: 'Explore the legacies, leave your footprints and history.',
           desc: [
             'Explore old ruins, abandoned bases and crazy man-made terrains.',
-            'Creates your own legends and untold stories.'
+            'Create your own legends and untold stories.'
           ]
         }
       ]

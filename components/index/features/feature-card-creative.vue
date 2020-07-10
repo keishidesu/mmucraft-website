@@ -23,7 +23,7 @@ export default {
           desc: [
             'Build epic buildings with the power of WorldEdit.',
             'You are still able to collect resources anywhere else.',
-            'Unlimited use of teleport to player, back to death position and back to home command!'
+            'Unlimited use of teleportation commands.'
           ]
         },
         {

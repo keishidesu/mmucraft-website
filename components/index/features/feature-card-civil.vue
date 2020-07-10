@@ -23,7 +23,7 @@ export default {
           desc: [
             'Claim lands and stay protected from griefing.',
             'You are still able to collect resources anywhere else.',
-            'Unlimited use of teleport to player, back to death position and back to home command!'
+            'Unlimited use of teleportation to players, back to death position and back to home command!'
           ]
         },
         {
