@@ -1,8 +1,6 @@
 <template>
   <div>
-    <div>
-      <CommandsBoard />
-    </div>
+    <CommandsBoard />
   </div>
 </template>
 

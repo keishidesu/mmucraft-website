@@ -1,44 +1,52 @@
 {
-  "faqs": {
-    "1": {
-      "question": "I can't login into the server!",
-      "answer" : "Make sure you use the same username as the registered username for MMUCraft. If you haven't register an account for this server, please go to <a target='_blank' href='/join'>here</a> and follow the instructions."
+  "faqs": [
+    {
+      "question": "I can't join the server!",
+      "answer": [
+        { "tag": "span", "text": "Make sure you use the same username as the registered username for MMUC Network. If you haven't register an account for this server, please go to " },
+        { "tag": "a", "text": "here", "href":"/join" },
+        { "tag": "span", "text": " and follow the instructions." }
+      ]
     },
-    "2": {
-      "question": "How can I get back to spawn?",
-      "answer" : "There is no way to get back to spawn area. Unless you die without resetting respawn position (Sleep in a bed) or your bed is detroyed or the surroundings of your bed is not suitable for respawn (Blocked by blocks or stabs)"
+    {
+      "question": "How can I get back to survival server's lobby?",
+      "answer": [
+        { "tag": "span", "text": "There is no way to get back to survival server's lobby area. Unless you die without resetting respawn position (Sleep in a bed) or your bed is detroyed or the surroundings of your bed is not suitable for respawn (Blocked by blocks or stabs)" }
+      ]
     },
-    "3": {
-      "question": "Can cracked Minecraft client join this server?",
-      "answer" : "This is an offline server ( ͡° ͜ʖ ͡°). <a target='_blank' href='http://www.google.com/search?q=what+is+minecraft+offline+server'>Click here</a>."
-    },
-    "4": {
+    {
       "question": "I slept in a bed but my respawn point is not reset!",
-      "answer" : "The surroundings of your bed must be suitable for respawn. Blocks and stabs will cause the bed unable to respawn player. Thus, remember to have some space around your bed to avoid this from happening."
+      "answer": [
+        { "tag": "span", "text": "The surroundings of your bed must be suitable for respawn. Blocks and slabs will cause the bed unable to respawn player. Thus, remember to have some space around your bed to avoid this from happening." }
+      ]
     },
-    "5": {
+    {
       "question": "Other players seems like ignoring my chat.",
-      "answer" : "Note that only players within 250 block radius range can see your message if you send a normal chat. Please read <a target='_blank' href='/commands'>commands page</a> to learn how to send a message globally."
+      "answer": [
+        { "tag": "span", "text": "Note that only players within 250 block radius range can see your message if you send a normal chat. Please read " },
+        { "tag": "a", "text": "commands page", "href":"/commands" },
+        { "tag": "span", "text": " to learn how to send a message globally." }
+      ]
     },
-    "6": {
-      "question": "No TP, Claim, sethome for survival?",
-      "answer" : "This is a vanilla gameplay server."
+    {
+      "question": "How do I reset my password?",
+      "answer": [
+        { "tag": "span", "text": "Reset password feature to be released." }
+      ]
     },
-    "7": {
-      "question": "How to join Creative Area?",
-      "answer" : "Read <a target='_blank' href='/commands'>here</a> to get the command for joining creative world. Make sure check out the rule of Creative Area too!"
+    {
+      "question": "How do I change my in-game name?",
+      "answer": [
+        { "tag": "span", "text": "No you can't. The only option is to make a new account with a new email address." }
+      ]
     },
-    "8": {
-      "question": "How do I change my password?",
-      "answer" : "Read <a target='_blank' href='/commands'>here</a> to get the command for changing password."
-    },
-    "9": {
-      "question": "How do I change my username?",
-      "answer": "Player may contact admins in our <a target='_blank' href='https://discord.gg/jMtqPjH'>Discord</a> server to change for you but keep in mind that this action is equivalent as creating a new account! Please remind admins to do data binding in case they forget (Advancements, Statistics, Inventory, Creative claimed region). I might add something to automate this process in the future."
-    },
-    "10": {
+    {
       "question": "Hey something isn't right in the server!",
-      "answer": "Report to admins immediately (<a target='_blank' href='https://discord.gg/jMtqPjH'>Join</a> our discord server now!). Make sure you understand the gameplay mechanics of Minecraft and 100% confirms that it is a server plugin bug."
+      "answer": [
+        { "tag": "span", "text": "Report to admins immediately (" },
+        { "tag": "a", "text": "Join", "href":"https://discord.gg/jMtqPjH" },
+        { "tag": "span", "text": " our discord server now!). Make sure you understand the fundamental mechanics of Minecraft and confirm that it is a server plugin bug." }
+      ]
     }
-  }
+  ]
 }

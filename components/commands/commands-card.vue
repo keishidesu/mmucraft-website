@@ -2,11 +2,14 @@
   <div>
     <div v-if="item">
       <div v-if="parameters">
-        /{{ item }}
+        <span v-if="slash">
+          /
+        </span>
+        {{ item }}
         <MCBadge
           v-for="para in parameters"
           :key="`para-${para}-${item}`"
-          :title="`${para.example}`"
+          :content="`${para.example}`"
           class="mt-2"
         >
           {{ para.name }}
@@ -39,6 +42,11 @@ export default {
       type: [Object, Array],
       required: false,
       default () {}
+    },
+    slash: {
+      type: Boolean,
+      required: false,
+      default: true
     }
   }
 }

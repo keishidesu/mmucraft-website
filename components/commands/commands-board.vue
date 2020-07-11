@@ -1,16 +1,16 @@
 <template>
   <MCBoard>
-    <MCTitle class="mt-4" style="text-shadow: 2px 6px 3px #000000;">
-      {{ sectionTitle }}
+    <MCTitle class="mt-4" :text-shadow="true">
+      Command Guide
     </MCTitle>
-    <div class="card-body p-3">
+    <div class="p-3">
       <div class="text-center">
         <div>
-          Here are some useful commands and special prefixes that players can use in game. To use the command, type "/" in chat then follow by the command you wish. You may notice there are actually tons of commands listing in game. Mostly are not for player use.
+          Here are some usable commands and special prefixes that players can use in game. To use the command, type "/" in chat then follow by the command you wish.
         </div>
         <div class="mt-3">
           This
-          <MCBadge title="hover me for more info">
+          <MCBadge content="Hover me to show an example!">
             parameter
           </MCBadge>
           represents the parameter you need to include. Hover it to view example input.
@@ -28,6 +28,7 @@
             :item="c_key"
             :usage="comm.usage"
             :parameters="comm.parameters"
+            :slash="(comm.slash !== undefined) ? comm.slash : true"
           />
           <hr>
         </div>
@@ -54,8 +55,7 @@ export default {
   },
   data: () => {
     return {
-      commands,
-      sectionTitle: 'MMUCraft Player Commands'
+      commands
     }
   }
 }
