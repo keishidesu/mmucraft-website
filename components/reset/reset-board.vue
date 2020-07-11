@@ -3,30 +3,30 @@
     <div class="mt-5 row justify-content-center">
       <div class="mt-5 col-6 position-relative text-light">
         <div class="card animated fadeInUp bg-dark shadow-lg">
-          <MCSubTitle style="text-align:center; padding:1rem;">
+          <MCSubTitle class="text-center p-1">
             {{ sectionTitle }}
           </MCSubTitle>
         </div>
         <br>
-        <div class="mb-5 card animated fadeInUp bg-dark shadow-lg px-5 py-5">
-          <h6>MMU Email Address</h6>
-          <b-form-input v-model="email" placeholder="Enter email" />
-          <br>
-          <h6>Previous Password</h6>
-          <b-form-input v-model="prevpwd" type="password" placeholder="Enter old password" />
-          <br>
-          <h6>New Password</h6>
-          <b-form-input v-model="newpwd1" type="password" placeholder="Enter new password" />
-          <br>
-          <h6>Confirm Password</h6>
-          <b-form-input v-model="newpwd2" type="password" placeholder="Re-Enter new password" />
-          <br>
+        <b-form class="mb-5 card animated fadeInUp bg-dark shadow-lg px-5 py-5" @submit="onSubmit">
+          <b-form-group id="input-group-1" label="MMU Email address:" label-for="input-1">
+            <b-form-input id="input-1" v-model="form.email" type="email" required placeholder="Enter email" />
+          </b-form-group>
+          <b-form-group id="input-group-2" label="Previous Password:" label-for="input-2">
+            <b-form-input id="input-2" v-model="form.prevpwd" type="password" required placeholder="Enter old password" />
+          </b-form-group>
+          <b-form-group id="input-group-3" label="New Password:" label-for="input-3">
+            <b-form-input id="input-3" v-model="form.newpwd1" type="password" required placeholder="Enter new password" />
+          </b-form-group>
+          <b-form-group id="input-group-4" label="Confirm Password:" label-for="input-4">
+            <b-form-input id="input-4" v-model="form.newpwd2" type="password" required placeholder="Re-enter new password" />
+          </b-form-group>
           <div>
-            <b-button variant="primary" :disabled="isDisabled">
+            <b-button type="submit" variant="primary">
               submit
             </b-button>
           </div>
-        </div>
+        </b-form>
       </div>
     </div>
   </div>
@@ -41,21 +41,25 @@ export default {
   },
   data: () => {
     return {
-      email: '',
-      prevpwd: '',
-      newpwd1: '',
-      newpwd2: '',
+      form: {
+        email: '',
+        prevpwd: '',
+        newpwd1: '',
+        newpwd2: ''
+      },
       sectionTitle: 'Forgot Password'
     }
   },
-  computed: {
-    isDisabled () {
-      if (this.prevpwd !== this.newpwd1 && this.newpwd1 !== '' && this.newpwd2 !== '') {
-        if (this.newpwd1 === this.newpwd2) {
-          return false
-        }
+  methods: {
+    onSubmit (evt) {
+      evt.preventDefault()
+      if (this.form.newpwd1 !== this.form.newpwd2) {
+        alert('Passwords does not match.')
+      } else if (this.form.prevpwd === this.form.newpwd1) {
+        alert('New password can not be same as previous password.')
+      } else {
+        alert(JSON.stringify(this.form))
       }
-      return true
     }
   }
 }

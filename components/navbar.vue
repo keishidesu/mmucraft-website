@@ -49,10 +49,6 @@ export default {
         {
           navitem: 'FAQ',
           destination: '/faq'
-        },
-        {
-          navitem: 'Reset',
-          destination: '/reset'
         }
       ]
     }

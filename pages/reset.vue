@@ -1,8 +1,6 @@
 <template>
   <div>
-    <div>
-      <ResetBoard />
-    </div>
+    <ResetBoard />
   </div>
 </template>
 
