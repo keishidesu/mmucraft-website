@@ -15,14 +15,6 @@
           >
             {{ item.navitem }}
           </b-nav-item>
-          <b-nav-item href="/join" class="d-md-none">
-            Join the server
-          </b-nav-item>
-        </b-navbar-nav>
-        <b-navbar-nav class="ml-auto d-md-block d-none">
-          <b-button href="/join" variant="outline-light">
-            Join the server
-          </b-button>
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
@@ -45,10 +37,6 @@ export default {
         {
           navitem: 'Commands',
           destination: '/commands'
-        },
-        {
-          navitem: 'FAQ',
-          destination: '/faq'
         }
       ]
     }

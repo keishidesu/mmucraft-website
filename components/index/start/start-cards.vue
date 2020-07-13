@@ -29,12 +29,6 @@ export default {
     return {
       cards: [
         {
-          image: 'pickaxe',
-          title: 'Register',
-          desc: 'For everyone!',
-          destination: '/register'
-        },
-        {
           image: 'netherstar',
           title: 'Read the Rules',
           desc: 'Make sure to read the rules before you start',
