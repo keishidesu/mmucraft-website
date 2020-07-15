@@ -1,9 +1,17 @@
 <template>
-  <div />
+  <div>
+    <div>
+      <Form />
+    </div>
+  </div>
 </template>
 
 <script>
-export default {
+import Form from '~/components/invite/form'
 
+export default {
+  components: {
+    Form
+  }
 }
 </script>
