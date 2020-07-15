@@ -1,4 +1,8 @@
-require('dotenv').config()
+const config_result = require('dotenv').config()
+
+if (config_result.error) {
+  throw config_result.error
+}
 
 const api_key = process.env.API_KEY
 const api_url = process.env.API_URL
