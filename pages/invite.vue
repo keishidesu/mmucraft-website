@@ -1,17 +1,17 @@
 <template>
   <div>
     <div>
-      <Form />
+      <InviteForm />
     </div>
   </div>
 </template>
 
 <script>
-import Form from '~/components/invite/form'
+import InviteForm from '~/components/invite/invite-form'
 
 export default {
   components: {
-    Form
+    InviteForm
   }
 }
 </script>
