@@ -50,6 +50,7 @@ export default {
         email: '',
         verified: false,
         pleaseTickRecaptcha: ''
+      },
       sectionTitle: 'Get Invitation'
     }
   },
