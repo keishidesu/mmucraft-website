@@ -19,6 +19,8 @@ $ npm run generate
 ```
 For detailed explanation, check out [Nuxt.js docs](https://nuxtjs.org).
 
+Copy `.env.example` rename to `.env` and fill in the variables.
+
 ## Coding style
 
 - Use 2 spaces as indentation
