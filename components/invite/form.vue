@@ -18,8 +18,10 @@
             type="email"
             required
             placeholder="Enter email"
-          ></b-form-input>
+          />
         </b-form-group>
+        <vue-recaptcha sitekey="site-key" />
+        <br>
         <b-button type="submit" variant="primary">
           Send Invitation
         </b-button>
@@ -29,13 +31,15 @@
 </template>
 
 <script>
+import VueRecaptcha from 'vue-recaptcha'
 import MCBoard from '~/components/mc/mc-board'
 import MCTitle from '~/components/mc/mc-title'
 
 export default {
   components: {
     MCBoard,
-    MCTitle
+    MCTitle,
+    VueRecaptcha
   },
   data () {
     return {
@@ -53,7 +57,3 @@ export default {
   }
 }
 </script>
-
-<style>
-
-</style>
