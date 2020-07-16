@@ -5,7 +5,7 @@
     </MCTitle>
     <hr>
     <div class="card-body" style="padding:1rem">
-      <b-form @submit="onSubmit">
+      <b-form @submit.prevent="onSubmit">
         <b-form-group
           id="input-group-1"
           label="MMU email address"
@@ -20,7 +20,10 @@
             placeholder="Enter email"
           />
         </b-form-group>
-        <vue-recaptcha sitekey="site-key" />
+        <vue-recaptcha sitekey="site-key" @verify="markAsVerified" />
+        <div class="text-danger">
+          <strong> {{ form.pleaseTickRecaptcha }} </strong>
+        </div>
         <br>
         <b-button type="submit" variant="primary">
           Send Invitation
@@ -44,15 +47,22 @@ export default {
   data () {
     return {
       form: {
-        email: ''
-      },
+        email: '',
+        verified: false,
+        pleaseTickRecaptcha: ''
       sectionTitle: 'Get Invitation'
     }
   },
   methods: {
+    markAsVerified (response) {
+      this.form.pleaseTickRecaptcha = ''
+      this.form.verified = true
+    },
     onSubmit (evt) {
-      evt.preventDefault()
-      alert(JSON.stringify(this.form))
+      if (!this.form.verified) {
+        this.form.pleaseTickRecaptcha = 'Please Tick Recaptcha.'
+        return true
+      }
     }
   }
 }
