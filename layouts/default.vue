@@ -26,9 +26,6 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css?family=Oswald|Patrick+Hand');
-@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
-
 body {
   height: 100%;
   font-family: 'Patrick Hand', cursive;
@@ -64,34 +61,34 @@ body {
 
 /* Animation */
 @keyframes fadeInUp {
-    from {
-        transform: translate3d(0,40px,0)
-    }
+  from {
+    transform: translate3d(0,40px,0)
+  }
 
-    to {
-        transform: translate3d(0,0,0);
-    }
+  to {
+    transform: translate3d(0,0,0);
+  }
 }
 
 @-webkit-keyframes fadeInUp {
-    from {
-        transform: translate3d(0,40px,0)
-    }
+  from {
+    transform: translate3d(0,40px,0)
+  }
 
-    to {
-        transform: translate3d(0,0,0);
-    }
+  to {
+    transform: translate3d(0,0,0);
+  }
 }
 
 .animated {
-    animation-duration: 1.3s;
-    animation-fill-mode: both;
-    -webkit-animation-duration: 1.3s;
-    -webkit-animation-fill-mode: both
+  animation-duration: 1.3s;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 1.3s;
+  -webkit-animation-fill-mode: both
 }
 
 .fadeInUp {
-    animation-name: fadeInUp;
-    -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+  -webkit-animation-name: fadeInUp;
 }
 </style>

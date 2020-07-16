@@ -28,14 +28,14 @@
     },
     "Chat Prefix": {
       "!": {
-        "usage": "Send you message across the server. Messages without this prefix will only seen by players within 250 block radius range.",
+        "usage": "Send your message across the server. Messages without this prefix will only seen by players within 250 block radius range.",
         "parameters": [
           { "name": "message", "example": "hi, anyone got location for ocean monument?" }
         ],
         "slash": false
       },
       "!!": {
-        "usage": "Send you message across the server and also to the specific channel in the Discord server.",
+        "usage": "Send your message across the server and also to the specific channel in the Discord server.",
         "parameters": [
           { "name": "message", "example": "hi Discord!" }
         ],
