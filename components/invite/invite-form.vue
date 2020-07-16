@@ -50,7 +50,6 @@ export default {
         email: '',
         verified: false,
         pleaseTickRecaptcha: ''
-      },
       sectionTitle: 'Get Invitation'
     }
   },
@@ -64,8 +63,6 @@ export default {
         this.form.pleaseTickRecaptcha = 'Please Tick Recaptcha.'
         return true
       }
-      evt.preventDefault()
-      alert(JSON.stringify(this.form))
     }
   }
 }
