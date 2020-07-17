@@ -32,7 +32,7 @@ export default {
           image: 'pickaxe',
           title: 'Register',
           desc: 'For everyone!',
-          destination: '/register'
+          destination: '/join'
         },
         {
           image: 'netherstar',

@@ -77,10 +77,10 @@ export default {
         })
         .then((res) => {
           if (res.status === 0) {
-            this.makeToast('An invitation has been sent to your email!')
+            this.makeToast('An invitation is on the way to your mail box. Might need to take up to 10 minutes to arrive!')
             setTimeout(() => {
               this.$router.push('/')
-            }, 3000)
+            }, 4000)
           } else if (res.status === 1) {
             this.makeToast('Invalid email address.', true)
           } else if (res.status === 2) {
