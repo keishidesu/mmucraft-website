@@ -77,7 +77,7 @@ export default {
         })
         .then((res) => {
           if (res.status === 0) {
-            this.makeToast('An invitation on the way to your mail box. Might need to take up to 10 minutes to arrive!')
+            this.makeToast('An invitation is on the way to your mail box. Might need to take up to 10 minutes to arrive!')
             setTimeout(() => {
               this.$router.push('/')
             }, 4000)
