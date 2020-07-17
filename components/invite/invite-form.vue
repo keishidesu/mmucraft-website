@@ -29,7 +29,10 @@
               Get Invitation!
             </b-button>
             <span :class="{ 'text-danger': submitDisabled, 'text-success': !submitDisabled }">
-              {{ submitErrorMessage }}
+              <span v-if="!loading">
+                {{ submitErrorMessage }}
+              </span>
+              <b-spinner v-else small variant="light" />
             </span>
           </div>
         </b-form>
@@ -56,13 +59,52 @@ export default {
       submitDisabled: true,
       submitErrorMessage: '',
       recaptchaDone: false,
-      siteKey: process.env.recaptcha_key
+      siteKey: process.env.recaptcha_key,
+      loading: false
     }
   },
   methods: {
     onSubmit (evt) {
       evt.preventDefault()
-      // axios request here
+      this.loading = true
+      this.submitDisabled = true
+      this.$axios
+        .$post(process.env.api, {
+          action: 'create',
+          target: 'pending-invite',
+          email: this.form.email,
+          token: this.form.token
+        })
+        .then((res) => {
+          if (res.status === 0) {
+            this.makeToast('An invitation has been sent to your email!')
+            setTimeout(() => {
+              this.$router.push('/')
+            }, 3000)
+          } else if (res.status === 1) {
+            this.makeToast('Invalid email address.', true)
+          } else if (res.status === 2) {
+            this.makeToast('Recaptcha failed, please try again.', true)
+          } else if (res.status === 3) {
+            this.makeToast('This email address has been taken.', true)
+          } else if (res.status === 4) {
+            this.makeToast('For some reason we cannot send you the invitation, please contact admin for help.', true)
+          } else {
+            this.makeToast('Unknown error.', true)
+          }
+        })
+        .catch((reason) => {
+          this.makeToast('Internal error! please contact admin.', true)
+          setTimeout(() => {
+            this.$router.push('/')
+          }, 3000)
+        })
+        .finally(() => {
+          this.loading = false
+          this.form.email = ''
+          this.form.token = ''
+          this.onCheck()
+        })
     },
     onCheck () {
       // NEED FIX: Hardcoded domains, not good.
@@ -78,6 +120,15 @@ export default {
       }
       this.submitErrorMessage = 'Good to go!'
       this.submitDisabled = false
+    },
+    makeToast (message, error) {
+      this.$bvToast.toast(message, {
+        title: error ? 'Error!' : 'Okay!',
+        variant: error ? 'danger' : 'success',
+        toaster: 'b-toaster-top-center',
+        solid: false,
+        appendToast: false
+      })
     },
     recaptchaVerify (res) {
       this.form.token = res

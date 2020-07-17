@@ -46,10 +46,16 @@
           </b-form-group>
           <div>
             <b-button type="submit" variant="primary" class="d-inline mr-3" :disabled="submitDisabled">
-              Register Me!
+              <span v-if="!loading">
+                Register Me!
+              </span>
+              <b-spinner v-else variant="light" />
             </b-button>
             <span :class="{ 'text-danger': submitDisabled, 'text-success': !submitDisabled }">
-              {{ submitErrorMessage }}
+              <span v-if="!loading">
+                {{ submitErrorMessage }}
+              </span>
+              <b-spinner v-else small variant="light" />
             </span>
           </div>
         </b-form>
@@ -65,6 +71,13 @@ export default {
   components: {
     MCSubTitle
   },
+  props: {
+    token: {
+      type: String,
+      required: true,
+      default: ''
+    }
+  },
   data: () => {
     return {
       form: {
@@ -73,13 +86,55 @@ export default {
         comfirmpassword: ''
       },
       submitDisabled: true,
-      submitErrorMessage: ''
+      submitErrorMessage: '',
+      loading: false
     }
   },
   methods: {
     onSubmit (evt) {
       evt.preventDefault()
-      // axios request here
+      this.loading = true
+      this.submitDisabled = true
+      this.$axios
+        .$post(process.env.api, {
+          action: 'create',
+          target: 'user',
+          name: this.form.ingamename,
+          password: this.form.password,
+          token: this.token
+        })
+        .then((res) => {
+          if (res.status === 0) {
+            this.makeToast('You have successfully registered an account!')
+            setTimeout(() => {
+              this.$router.push('/')
+            }, 3000)
+          } else if (res.status === 1) {
+            this.makeToast('Invitation token missing! Please contact admin.', true)
+            setTimeout(() => {
+              this.$router.push('/')
+            }, 3000)
+          } else if (res.status === 2) {
+            this.makeToast('Invalid username.', true)
+          } else if (res.status === 3) {
+            this.makeToast('The username or email has been taken.', true)
+          } else {
+            this.makeToast('Unknown error.', true)
+          }
+        })
+        .catch((reason) => {
+          this.makeToast('Internal error! please contact admin.', true)
+          setTimeout(() => {
+            this.$router.push('/')
+          }, 3000)
+        })
+        .finally(() => {
+          this.loading = false
+          this.form.ingamename = ''
+          this.form.password = ''
+          this.form.comfirmpassword = ''
+          this.onCheck()
+        })
     },
     onCheck () {
       if (!/^[A-Za-z0-9_]+$/.test(this.form.ingamename) || this.form.ingamename.length < 3 || this.form.ingamename.length > 16) {
@@ -104,6 +159,15 @@ export default {
       }
       this.submitErrorMessage = 'Good to go!'
       this.submitDisabled = false
+    },
+    makeToast (message, error) {
+      this.$bvToast.toast(message, {
+        title: error ? 'Error!' : 'Okay!',
+        variant: error ? 'danger' : 'success',
+        toaster: 'b-toaster-top-center',
+        solid: false,
+        appendToast: false
+      })
     }
   }
 }
