@@ -1,15 +1,15 @@
 <template>
   <div>
-    <RegisterBoard />
+    <RegisterForm />
   </div>
 </template>
 
 <script>
-import RegisterBoard from '~/components/register/register-board'
+import RegisterForm from '~/components/register/register-form'
 
 export default {
   components: {
-    RegisterBoard
+    RegisterForm
   }
 }
 </script>
