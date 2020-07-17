@@ -9,7 +9,7 @@
       <b-collapse id="collapse-start">
         <b-card class="border-0 bg-none text-center">
           <div>
-            {{ desc }}
+            MMUC Network is an offline-mode Minecraft server that contains various game modes.
           </div>
         </b-card>
       </b-collapse>
@@ -41,11 +41,6 @@ export default {
     Anouncement,
     Github,
     ServerStat
-  },
-  data: () => {
-    return {
-      desc: 'MMUCraft is an offline-mode Minecraft server which allows cracked Minecraft clients to join. This is server for players to enjoy the original survival game of Minecraft. Join us with your friends now!'
-    }
   }
 }
 </script>

@@ -6,6 +6,7 @@ if (config_result.error) {
 
 const api_key = process.env.API_KEY
 const api_url = process.env.API_URL
+const site_key = process.env.SITE_KEY
 
 export default {
   /*
@@ -91,6 +92,7 @@ export default {
     host: '0.0.0.0'
   },
   env: {
-    api: api_url
+    api: api_url,
+    recaptcha_key: site_key
   }
 }
