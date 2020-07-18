@@ -1,0 +1,27 @@
+{
+  "plugins": [
+    "Advanced Portals",
+    "AuthMe Reloaded",
+    "AuthMe Bungeecord",
+    "BKCommonLib",
+    "ChatManager",
+    "ClearLagg",
+    "CoreProtect",
+    "DiscordSRV",
+    "EssentialsX",
+    "GriefPrevention",
+    "Holographic Displays",
+    "Image On Map",
+    "Light Cleaner",
+    "LuckPerms",
+    "Multiverse Core",
+    "PlotSquared",
+    "ProtocolLib",
+    "SAML",
+    "Server Restorer",
+    "Skin Restorer",
+    "Vault",
+    "WorldEdit",
+    "WorldGuard"
+  ]
+}
