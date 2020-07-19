@@ -1,6 +1,6 @@
 <template>
   <MCBoard>
-    <MCTitle class="mt-4" :text-shadow="true">
+    <MCTitle>
       Plugins
     </MCTitle>
     <div>
@@ -32,3 +32,11 @@ export default {
   }
 }
 </script>
+
+<style>
+ul {
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+}
+</style>
