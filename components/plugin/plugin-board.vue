@@ -5,10 +5,18 @@
     </MCTitle>
     <div>
       <ul>
-        <li v-for="plugin in plugins" :key="plugin">
-          <p>
-            {{ plugin }}
-          </p>
+        <li
+          v-for="plugin in plugins"
+          :key="`plugin-${plugin}`"
+          class="my-1"
+        >
+          <div
+            :is="plugin.tag"
+            :href="plugin.href ? plugin.href : ''"
+            target="_blank"
+          >
+            {{ plugin.text }}
+          </div>
         </li>
       </ul>
     </div>
@@ -33,10 +41,19 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 ul {
   columns: 2;
   -webkit-columns: 2;
   -moz-columns: 2;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+element {
+
 }
 </style>
