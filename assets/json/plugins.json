@@ -1,0 +1,96 @@
+{
+  "plugins": [
+    {
+      "text": "Advanced Portals", 
+      "href": "https://www.spigotmc.org/resources/14356/"
+    },
+    {
+      "text": "AuthMe Reloaded",
+      "href": "https://ci.codemc.io/job/AuthMe/job/AuthMeReloaded/"
+    },
+    {
+      "text": "AuthMe Bungeecord",
+      "href": "https://ci.codemc.io/job/AuthMe/job/AuthMeBungee/"
+    },
+    {
+      "text": "BKCommonLib",
+      "href": "https://www.spigotmc.org/resources/39590/"
+    },
+    {
+      "text": "ChatManager",
+      "href": "https://www.spigotmc.org/resources/52245/"
+    },
+    {
+      "text": "ClearLagg",
+      "href": "https://dev.bukkit.org/projects/clearlagg"
+    },
+    {
+      "text": "CoreProtect",
+      "href": "https://www.spigotmc.org/resources/8631/"
+    },
+    {
+      "text": "DiscordSRV",
+      "href": "https://www.spigotmc.org/resources/18494/"
+    },
+    {
+      "text": "EssentialsX",
+      "href": "https://www.spigotmc.org/resources/9089/"
+    },
+    {
+      "text": "GriefPrevention",
+      "href": "https://www.spigotmc.org/resources/1884/"
+    },
+    {
+      "text": "Holographic Displays",
+      "href": "https://dev.bukkit.org/projects/holographic-displays"
+    },
+    {
+      "text": "Image On Map",
+      "href": "https://www.spigotmc.org/resources/26585/"
+    },
+    {
+      "text": "Light Cleaner",
+      "href": "https://www.spigotmc.org/resources/42469/"
+    },
+    {
+      "text": "LuckPerms",
+      "href": "https://www.spigotmc.org/resources/28140/"
+    },
+    {
+      "text": "Multiverse Core",
+      "href": "https://dev.bukkit.org/projects/multiverse-core"
+    },
+    {
+      "text": "PlotSquared",
+      "href": "https://www.spigotmc.org/resources/77506/"
+    },
+    {
+      "text": "ProtocolLib",
+      "href": "https://www.spigotmc.org/resources/1997/"
+    },
+    {
+      "text": "SAML",
+      "href": "https://www.spigotmc.org/resources/67484/"
+    },
+    {
+      "text": "Server Restorer",
+      "href": "https://www.spigotmc.org/resources/2124/"
+    },
+    {
+      "text": "Skin Restorer",
+      "href": "https://www.spigotmc.org/resources/34315/"
+    },
+    {
+      "text": "Vault",
+      "href": "https://www.spigotmc.org/resources/34315/"
+    },
+    {
+      "text": "WorldEdit",
+      "href": "https://dev.bukkit.org/projects/worldedit"
+    },
+    {
+      "text": "WorldGuard",
+      "href": "https://dev.bukkit.org/projects/worldguard"
+    }
+  ]
+}
