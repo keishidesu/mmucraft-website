@@ -61,9 +61,9 @@ export default {
       }
     }
   },
-  created () {
+  async created () {
     for (const stat in this.stats) {
-      this.fetchStats(this.stats[stat])
+      await this.fetchStats(this.stats[stat])
     }
   },
   methods: {
