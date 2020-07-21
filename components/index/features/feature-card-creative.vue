@@ -22,7 +22,7 @@ export default {
           header: 'Free for all creative server!',
           desc: [
             'Build epic buildings with the power of WorldEdit.',
-            'You are still able to collect resources anywhere else.',
+            'All your builds are protected in your claimed lands!',
             'Unlimited use of teleportation commands.'
           ]
         },
@@ -31,7 +31,6 @@ export default {
           header: 'All your builds are protected.',
           desc: [
             'Everyone must claim their land before they can build.',
-            'All your builds are protected in your claimed lands!',
             '16 x 16 size for each claim.'
           ]
         },
