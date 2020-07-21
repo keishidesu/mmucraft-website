@@ -10,13 +10,12 @@
           :key="`plugin-${plugin}`"
           class="my-1"
         >
-          <div
-            :is="plugin.tag"
+          <a
             :href="plugin.href ? plugin.href : ''"
             target="_blank"
           >
             {{ plugin.text }}
-          </div>
+          </a>
         </li>
       </ul>
     </div>
@@ -51,9 +50,5 @@ ul {
 a {
   text-decoration: none;
   cursor: pointer;
-}
-
-element {
-
 }
 </style>

@@ -1,117 +1,94 @@
 {
   "plugins": [
     {
-      "tag": "a", 
       "text": "Advanced Portals", 
       "href": "https://www.spigotmc.org/resources/14356/"
     },
     {
-      "tag": "a",
       "text": "AuthMe Reloaded",
       "href": "https://ci.codemc.io/job/AuthMe/job/AuthMeReloaded/"
     },
     {
-      "tag": "a",
       "text": "AuthMe Bungeecord",
       "href": "https://ci.codemc.io/job/AuthMe/job/AuthMeBungee/"
     },
     {
-      "tag": "a",
       "text": "BKCommonLib",
       "href": "https://www.spigotmc.org/resources/39590/"
     },
     {
-      "tag": "a",
       "text": "ChatManager",
       "href": "https://www.spigotmc.org/resources/52245/"
     },
     {
-      "tag": "a",
       "text": "ClearLagg",
       "href": "https://dev.bukkit.org/projects/clearlagg"
     },
     {
-      "tag": "a",
       "text": "CoreProtect",
       "href": "https://www.spigotmc.org/resources/8631/"
     },
     {
-      "tag": "a",
       "text": "DiscordSRV",
       "href": "https://www.spigotmc.org/resources/18494/"
     },
     {
-      "tag": "a",
       "text": "EssentialsX",
       "href": "https://www.spigotmc.org/resources/9089/"
     },
     {
-      "tag": "a",
       "text": "GriefPrevention",
       "href": "https://www.spigotmc.org/resources/1884/"
     },
     {
-      "tag": "a",
       "text": "Holographic Displays",
       "href": "https://dev.bukkit.org/projects/holographic-displays"
     },
     {
-      "tag": "a",
       "text": "Image On Map",
       "href": "https://www.spigotmc.org/resources/26585/"
     },
     {
-      "tag": "a",
       "text": "Light Cleaner",
       "href": "https://www.spigotmc.org/resources/42469/"
     },
     {
-      "tag": "a",
       "text": "LuckPerms",
       "href": "https://www.spigotmc.org/resources/28140/"
     },
     {
-      "tag": "a",
       "text": "Multiverse Core",
       "href": "https://dev.bukkit.org/projects/multiverse-core"
     },
     {
-      "tag": "a",
       "text": "PlotSquared",
       "href": "https://www.spigotmc.org/resources/77506/"
     },
     {
-      "tag": "a",
       "text": "ProtocolLib",
       "href": "https://www.spigotmc.org/resources/1997/"
     },
     {
-      "tag": "a",
       "text": "SAML",
       "href": "https://www.spigotmc.org/resources/67484/"
     },
     {
-      "tag": "a",
       "text": "Server Restorer",
       "href": "https://www.spigotmc.org/resources/2124/"
     },
     {
-      "tag": "a",
       "text": "Skin Restorer",
       "href": "https://www.spigotmc.org/resources/34315/"
     },
     {
-      "tag": "a",
       "text": "Vault",
       "href": "https://www.spigotmc.org/resources/34315/"
     },
     {
-      "tag": "a",
       "text": "WorldEdit",
       "href": "https://dev.bukkit.org/projects/worldedit"
     },
     {
-      "tag": "a",
       "text": "WorldGuard",
       "href": "https://dev.bukkit.org/projects/worldguard"
     }
