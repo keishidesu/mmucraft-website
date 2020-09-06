@@ -17,10 +17,6 @@
       "href": "https://www.spigotmc.org/resources/39590/"
     },
     {
-      "text": "ChatManager",
-      "href": "https://www.spigotmc.org/resources/52245/"
-    },
-    {
       "text": "ClearLagg",
       "href": "https://dev.bukkit.org/projects/clearlagg"
     },
@@ -61,6 +57,10 @@
       "href": "https://dev.bukkit.org/projects/multiverse-core"
     },
     {
+      "text": "Placeholder API",
+      "href": "https://www.spigotmc.org/resources/6245/"
+    },
+    {
       "text": "PlotSquared",
       "href": "https://www.spigotmc.org/resources/77506/"
     },
@@ -83,6 +83,10 @@
     {
       "text": "Vault",
       "href": "https://www.spigotmc.org/resources/34315/"
+    },
+    {
+      "text": "Venture Chat",
+      "href": "https://www.spigotmc.org/resources/771/"
     },
     {
       "text": "Void Generator",
