@@ -2,7 +2,7 @@
   <b-container fluid class="mt-5">
     <b-row align-h="center" class="mt-5">
       <b-col cols="12" md="6" class="mt-5 text-light">
-        <b-form class="mb-5 card animated fadeInUp bg-dark shadow-lg px-5 py-5" @submit="onSubmit">
+        <b-form class="mb-5 card animated fadeInUp bg-dark shadow-lg px-5 py-5" method="POST" @submit="onSubmit">
           <MCSubTitle class="text-center mb-3">
             Password Reset
           </MCSubTitle>
