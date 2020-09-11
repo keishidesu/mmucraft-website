@@ -7,6 +7,8 @@ if (config_result.error) {
 const api_key = process.env.API_KEY
 const api_url = process.env.API_URL
 const site_key = process.env.SITE_KEY
+const port = process.env.PORT
+const host = process.env.HOST
 
 export default {
   /*
@@ -64,11 +66,19 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    // Doc: https://helmetjs.github.io/
+    'nuxt-helmet',
     // Doc: https://bootstrap-vue.js.org
     'bootstrap-vue/nuxt',
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios'
   ],
+  /*
+  ** Nuxt helmet module configuration
+  ** See https://www.npmjs.com/package/nuxt-helmet
+  */
+  helmet: {
+  },
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
@@ -88,9 +98,12 @@ export default {
   ** Host configuration
   */
   server: {
-    port: 3000,
-    host: '0.0.0.0'
+    port: parseInt(port),
+    host: host
   },
+  /*
+  ** Environment variable configuration
+  */
   env: {
     api: api_url,
     recaptcha_key: site_key
