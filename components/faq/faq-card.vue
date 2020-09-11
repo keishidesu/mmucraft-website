@@ -54,6 +54,7 @@ export default {
 a {
   text-decoration: none;
   cursor: pointer;
+  color: rgba(255, 255, 255, 1);
 }
 .collapsed > .when-opened {
   display: none;
