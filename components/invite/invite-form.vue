@@ -17,6 +17,7 @@
             />
           </b-form-group>
           <vue-recaptcha
+            ref="recaptcha"
             class="mb-3"
             theme="dark"
             :sitekey="siteKey"
@@ -56,12 +57,28 @@ export default {
         email: '',
         token: ''
       },
+      whitelistedDomains: [],
       submitDisabled: true,
       submitErrorMessage: '',
       recaptchaDone: false,
       siteKey: process.env.recaptcha_key,
       loading: false
     }
+  },
+  created () {
+    this.$axios
+      .$post(process.env.api, {
+        action: 'read',
+        target: 'email-whitelist'
+      })
+      .then((res) => {
+        this.whitelistedDomains = res.domains
+      })
+      .catch((reason) => {
+        this.makeToast('Something wrong with the email domain checker, please contact admin!', true)
+        this.submitErrorMessage = 'Something wrong with the email domain checker, please contact admin!'
+        this.submitDisabled = true
+      })
   },
   methods: {
     onSubmit (evt) {
@@ -78,9 +95,6 @@ export default {
         .then((res) => {
           if (res.status === 0) {
             this.makeToast('An invitation is on the way to your mail box. Might need to take up to 10 minutes to arrive!')
-            setTimeout(() => {
-              this.$router.push('/')
-            }, 4000)
           } else if (res.status === 1) {
             this.makeToast('Invalid email address.', true)
           } else if (res.status === 2) {
@@ -95,20 +109,18 @@ export default {
         })
         .catch((reason) => {
           this.makeToast('Internal error! please contact admin.', true)
-          setTimeout(() => {
-            this.$router.push('/')
-          }, 3000)
         })
         .finally(() => {
           this.loading = false
           this.form.email = ''
           this.form.token = ''
+          this.recaptchaDone = false
+          this.$refs.recaptcha.reset()
           this.onCheck()
         })
     },
     onCheck () {
-      // NEED FIX: Hardcoded domains, not good.
-      if (!(this.form.email.endsWith('@gmail.com') || this.form.email.endsWith('@student.mmu.edu.my') || this.form.email.endsWith('@mmu.edu.my'))) {
+      if (!this.whitelistedDomains.some((domain) => { return this.form.email.endsWith(domain) })) {
         this.submitErrorMessage = 'Not a valid email address or a whitelisted email domain.'
         this.submitDisabled = true
         return
