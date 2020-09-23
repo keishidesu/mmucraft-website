@@ -49,6 +49,8 @@ export default {
 a {
   cursor: pointer;
   transition: 250ms;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 1);
 }
 
 a:hover {
