@@ -31,10 +31,16 @@
           </b-form-group>
           <div>
             <b-button type="submit" variant="primary" class="d-inline mr-3" :disabled="submitDisabled">
-              Reset Password
+              <span v-if="!loading">
+                Reset!
+              </span>
+              <b-spinner v-else variant="light" />
             </b-button>
             <span :class="{ 'text-danger': submitDisabled, 'text-success': !submitDisabled }">
-              {{ submitErrorMessage }}
+              <span v-if="!loading">
+                {{ submitErrorMessage }}
+              </span>
+              <b-spinner v-else small variant="light" />
             </span>
           </div>
         </b-form>
@@ -50,6 +56,13 @@ export default {
   components: {
     MCSubTitle
   },
+  props: {
+    token: {
+      type: String,
+      required: true,
+      default: ''
+    }
+  },
   data: () => {
     return {
       form: {
@@ -57,13 +70,56 @@ export default {
         comfirmpassword: ''
       },
       submitDisabled: true,
-      submitErrorMessage: ''
+      submitErrorMessage: '',
+      loading: false
     }
   },
   methods: {
     onSubmit (evt) {
       evt.preventDefault()
-      // axios request here
+      this.loading = true
+      this.submitDisabled = true
+      this.$axios
+        .$post(process.env.api, {
+          action: 'update',
+          target: 'password-reset',
+          password: this.form.password,
+          token: this.token
+        })
+        .then((res) => {
+          if (res.status === 0) {
+            this.makeToast('Your password has been updated!')
+            setTimeout(() => {
+              this.$router.push('/')
+            }, 3000)
+          } else if (res.status === 1) {
+            this.makeToast('Invitation token missing! Please contact admin.', true)
+            setTimeout(() => {
+              this.$router.push('/')
+            }, 3000)
+          } else if (res.status === 2) {
+            this.makeToast('Password too short.', true)
+          } else if (res.status === 3) {
+            this.makeToast('User not exist, please contact admin!', true)
+            setTimeout(() => {
+              this.$router.push('/')
+            }, 3000)
+          } else {
+            this.makeToast('Unknown error.', true)
+          }
+        })
+        .catch((reason) => {
+          this.makeToast('Internal error! please contact admin.', true)
+          setTimeout(() => {
+            this.$router.push('/')
+          }, 3000)
+        })
+        .finally(() => {
+          this.loading = false
+          this.form.password = ''
+          this.form.comfirmpassword = ''
+          this.onCheck()
+        })
     },
     onCheck () {
       if (this.form.password.length < 5) {
@@ -78,6 +134,15 @@ export default {
       }
       this.submitErrorMessage = 'Alright, make sure you remember your new password!'
       this.submitDisabled = false
+    },
+    makeToast (message, error) {
+      this.$bvToast.toast(message, {
+        title: error ? 'Error!' : 'Okay!',
+        variant: error ? 'danger' : 'success',
+        toaster: 'b-toaster-top-center',
+        solid: false,
+        appendToast: false
+      })
     }
   }
 }

@@ -118,6 +118,8 @@ export default {
             this.makeToast('Invalid username.', true)
           } else if (res.status === 3) {
             this.makeToast('The username or email has been taken.', true)
+          } else if (res.status === 4) {
+            this.makeToast('Password too short.', true)
           } else {
             this.makeToast('Unknown error.', true)
           }

@@ -15,11 +15,17 @@
           >
             {{ item.navitem }}
           </b-nav-item>
+          <b-nav-item href="/password-reset" class="d-md-none">
+            Forget password?
+          </b-nav-item>
           <b-nav-item href="/join" class="d-md-none">
             Join the server
           </b-nav-item>
         </b-navbar-nav>
         <b-navbar-nav class="ml-auto d-md-block d-none">
+          <a class="text-decoration-none text-light mr-3" href="/password-reset">
+            Forget password?
+          </a>
           <b-button href="/join" variant="outline-light">
             Join the server
           </b-button>
