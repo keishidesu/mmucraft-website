@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import InviteForm from '~/components/invite/invite-form'
+import InviteForm from '~/components/register/invite-form'
 
 export default {
   components: {

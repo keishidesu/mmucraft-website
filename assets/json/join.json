@@ -4,7 +4,7 @@
       "title": "Getting the Invitation Link",
       "desc": [
         { "tag": "div", "text": "Smash on this button to get your invitation link:" },
-        { "tag": "button", "href": "/invite", "text": "Get Invitation Here" },
+        { "tag": "button", "href": "/register", "text": "Get Invitation Here" },
         { "tag": "div", "text": "You need to provide a email address with whitelisted domain in order to get the invitation link. You should receive an invitation email within a few minutes." }
       ]
     },
