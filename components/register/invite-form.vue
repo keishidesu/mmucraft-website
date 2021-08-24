@@ -120,6 +120,11 @@ export default {
         })
     },
     onCheck () {
+      if (this.form.email.length <= 0) {
+        this.submitErrorMessage = ''
+        this.submitDisabled = true
+        return
+      }
       if (!this.whitelistedDomains.some((domain) => { return this.form.email.endsWith(domain) })) {
         this.submitErrorMessage = 'Not a valid email address or a whitelisted email domain.'
         this.submitDisabled = true
